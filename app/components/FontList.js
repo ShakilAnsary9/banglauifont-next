@@ -3,7 +3,7 @@ const FontLists = {
     {
       title: "Hind Siliguri - হিন্দ শিলিগুরি",
       download_url: "/fonts/hind-siliguri/hind-siliguri.zip",
-      font_family: "Hind Siliguri",
+      font_family: "font-family: 'Hind Siliguri'",
     },
     {
       title: "Anek Bangla - আনেক বাংলা",

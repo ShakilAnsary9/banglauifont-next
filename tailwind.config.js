@@ -19,6 +19,7 @@ module.exports = {
         primary: "#C52127",
         card: "#343a40",
         element: "#212529",
+        cdn: "#21252952",
         caution: "#ffc000",
       },
       padding: {
@@ -27,6 +28,9 @@ module.exports = {
       },
       fontSize: {
         small: "10px",
+      },
+      zIndex: {
+        1: "1",
       },
     },
   },
