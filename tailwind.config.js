@@ -15,9 +15,18 @@ module.exports = {
       fontFamily: {
         sans: ["Space Grotesk", "Hind Siliguri", "sans-serif"],
       },
-      backgroundColor: {
+      colors: {
+        primary: "#C52127",
         card: "#343a40",
         element: "#212529",
+        caution: "#ffc000",
+      },
+      padding: {
+        normal: "8px 15px",
+        tag: "3px 10px",
+      },
+      fontSize: {
+        small: "10px",
       },
     },
   },

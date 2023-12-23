@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Icon */
+@import url("https://lineuisvg.netlify.app/lineuisvg.css");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -14,6 +17,21 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+
+.element {
+  @apply bg-card p-normal rounded-lg;
+}
+.bg-image {
+  @apply bg-no-repeat bg-center bg-cover;
+}
+
+.card-btn {
+  @apply bg-primary text-white p-normal rounded-xl relative;
+}
+
+.tag {
+  @apply absolute -top-3 right-0 bg-element p-tag text-small rounded-full;
 }
 
 body {
