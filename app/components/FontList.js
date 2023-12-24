@@ -47,32 +47,26 @@ const FontLists = {
       cdn_link:
         "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/alinur-tatsama.css",
     },
+    {
+      id: "23",
+      title: "Alinur Borno Bikash - আলিনুর বর্নবিকাশ",
+      download_url: "/fonts/alinur-tatsama/alinur-tatsama.zip",
+      font_family: "font-family: 'Alinur Borno Bikash'",
+      preview_family: "Alinur Borno Bikash",
+      cdn_link:
+        "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/alinur-borno-bikas.css",
+    },
   ],
   fontlist3: [
     {
       id: "31",
-      title: "Third Font - তৃতীয় ফন্ট",
-      download_url: "/fonts/third-font/third-font.zip",
-      font_family: "Third Font",
+      title: "Alinur Borno Bikash - আলিনুর বর্নবিকাশ",
+      download_url: "/fonts/alinur-tatsama/alinur-tatsama.zip",
+      font_family: "font-family: 'Alinur Borno Bikash'",
+      preview_family: "Alinur Borno Bikash",
+      cdn_link:
+        "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/alinur-borno-bikas.css",
     },
   ],
 };
 export default FontLists;
-
-// export default [
-//   {
-//     title: "Hind Siliguri - হিন্দ শিলিগুরি",
-//     download_url: "/fonts/hind-siliguri/hind-siliguri.zip",
-//     font_family: "Hind Siliguri",
-//   },
-//   {
-//     title: "Anek Bangla - আনেক বাংলা",
-//     download_url: "",
-//     font_family: "Hind Silig",
-//   },
-//   {
-//     title: "Tiro Bangla - তিরো বাংলা",
-//     download_url: "",
-//     font_family: "Hind Siligur",
-//   },
-// ];
