@@ -28,10 +28,10 @@ const Controller = ({
   };
 
   return (
-    <div className="container mx-auto p-10 mb-6 bg-[url('/svg/font-bg.svg')] bg-image rounded-2xl">
-      <div className="grid grid-cols-4 gap-6">
+    <div className="container mx-auto p-5 md:p-10 mb-6 bg-[url('/svg/font-bg.svg')] bg-image rounded-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <input
-          className="col-span-2 px-4 rounded-xl h-12 text-black"
+          className="col-span-1 md:col-span-2 px-4 rounded-xl h-12 text-black"
           type="text"
           placeholder="এখানে লিখুন"
           value={inputText}

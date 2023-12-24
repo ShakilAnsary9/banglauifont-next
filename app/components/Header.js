@@ -107,7 +107,7 @@ const Header = () => {
                 )}
               </span>
             </div>
-            <div className="error-mail flex gap-2 items-center element">
+            <div className="error-mail gap-2 items-center element hidden md:flex">
               <svg
                 className="text-caution"
                 xmlns="http://www.w3.org/2000/svg"

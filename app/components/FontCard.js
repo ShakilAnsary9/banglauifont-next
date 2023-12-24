@@ -84,7 +84,9 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
             key={index}
           >
             <div className="relative z-10">
-              <h1 className="text-xl font-medium mb-2">{font.title}</h1>
+              <h1 className="md:text-lg text-xl  font-medium mb-2">
+                {font.title}
+              </h1>
               <small>Preview</small>
               <div
                 className="preview pb-3"
@@ -267,7 +269,7 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
   return (
     <>
       <div className="container mx-auto">
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.keys(FontLists).map((key) => (
             <div className="flex flex-col gap-6" key={key}>
               <FontList fonts={FontLists[key]} />
