@@ -14,6 +14,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Space Grotesk", "Hind Siliguri", "sans-serif"],
+        firacode: "'Fira Code', monospace",
       },
       colors: {
         primary: "#C52127",

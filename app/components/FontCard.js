@@ -3,6 +3,18 @@ import FontLists from "./FontList";
 
 const FontCard = ({ previewText, fontSize, fontWeight }) => {
   const FontList = ({ fonts }) => {
+    const copyLinkCdn = (font) => {
+      const linkCdnInput = document.getElementById(`link-cdn-${font.id}`);
+      linkCdnInput.select();
+      document.execCommand("copy");
+    };
+
+    const copyImportCdn = (font) => {
+      const importCdnInput = document.getElementById(`import-cdn-${font.id}`);
+      importCdnInput.select();
+      document.execCommand("copy");
+    };
+
     const [copiedStates, setCopiedStates] = useState(
       Array(fonts.length).fill(false)
     );
@@ -42,6 +54,7 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
                 style={{
                   fontSize: `${fontSize}px`,
                   fontWeight: `${fontWeight}`,
+                  fontFamily: `${font.preview_family}`,
                 }}
               >
                 {previewText}
@@ -72,12 +85,15 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
 
                 <div class="link-cdn flex items-center bg-cdn p-3 mt-4 rounded-lg">
                   <input
-                    className="w-full bg-transparent pe-3"
+                    id={`link-cdn-${font.id}`}
+                    className="w-full bg-transparent pe-3 ring-0 outline-none border-none opacity-50"
                     type="text"
-                    value="<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/ShakilAnsary9/BanglaUI-Font@latest/FontCSS/hind-siliguri.css'>"
+                    value={`<link rel='stylesheet' href='${font.cdn_link}'>`}
                     readonly
                   />
                   <svg
+                    className="cursor-pointer hover:text-green-500 linkcdn-copy"
+                    onClick={() => copyLinkCdn(font)}
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -95,12 +111,15 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
 
                 <div class="link-cdn flex items-center bg-cdn p-3 mt-4 rounded-lg">
                   <input
-                    className="w-full bg-transparent pe-3"
+                    id={`import-cdn-${font.id}`}
+                    className="w-full bg-transparent pe-3 ring-0 outline-none border-none opacity-50"
                     type="text"
-                    value="<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/ShakilAnsary9/BanglaUI-Font@latest/FontCSS/hind-siliguri.css'>"
+                    value={`@import url('${font.cdn_link}');`}
                     readonly
                   />
                   <svg
+                    className="cursor-pointer hover:text-green-500 importcdn-copy"
+                    onClick={() => copyImportCdn(font)}
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"

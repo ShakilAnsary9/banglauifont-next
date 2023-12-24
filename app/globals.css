@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Icon */
-@import url("https://lineuisvg.netlify.app/lineuisvg.css");
+/* Fira Code */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+/* FontCSS */
+@import url(../public/css/hind-siliguri.css);
+@import url(../public/css/anek-bangla.css);
+@import url(../public/css/tiro-bangla.css);
+@import url(../public/css/bonbonia-kajla.css);
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -42,4 +48,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.link-cdn {
+  font-family: "Fira Code", monospace;
 }
