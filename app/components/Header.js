@@ -13,25 +13,19 @@ const Header = () => {
       try {
         const snapshot = await get(visitCountRef);
         if (snapshot.exists()) {
-          setVisitCount(snapshot.val());
+          const count = snapshot.val();
+          setVisitCount(count);
+          await set(visitCountRef, count + 1); // Increment count in Firebase
+        } else {
+          await set(visitCountRef); // Initialize count if not exists
+          setVisitCount(0);
         }
       } catch (error) {
-        console.error("Error fetching visit count:", error);
+        console.error("Error fetching/setting visit count:", error);
       }
     };
 
-    const incrementVisitCount = async () => {
-      try {
-        await set(visitCountRef, (visitCount || 0) + 1);
-        // After the count is updated, fetch the updated count
-        fetchVisitCount();
-      } catch (error) {
-        console.error("Error incrementing visit count:", error);
-      }
-    };
-
-    // Increment visit count on initial load
-    incrementVisitCount();
+    fetchVisitCount();
   }, []);
 
   return (
@@ -60,7 +54,58 @@ const Header = () => {
                   <path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
                 </g>
               </svg>
-              <span>{visitCount}</span>
+              <span>
+                {visitCount || (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="4" cy="12" r="3" fill="currentColor">
+                      <animate
+                        id="svgSpinners3DotsFade0"
+                        fill="freeze"
+                        attributeName="opacity"
+                        begin="0;svgSpinners3DotsFade1.end-0.25s"
+                        dur="0.75s"
+                        values="1;.2"
+                      />
+                    </circle>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="3"
+                      fill="currentColor"
+                      opacity=".4"
+                    >
+                      <animate
+                        fill="freeze"
+                        attributeName="opacity"
+                        begin="svgSpinners3DotsFade0.begin+0.15s"
+                        dur="0.75s"
+                        values="1;.2"
+                      />
+                    </circle>
+                    <circle
+                      cx="20"
+                      cy="12"
+                      r="3"
+                      fill="currentColor"
+                      opacity=".3"
+                    >
+                      <animate
+                        id="svgSpinners3DotsFade1"
+                        fill="freeze"
+                        attributeName="opacity"
+                        begin="svgSpinners3DotsFade0.begin+0.3s"
+                        dur="0.75s"
+                        values="1;.2"
+                      />
+                    </circle>
+                  </svg>
+                )}
+              </span>
             </div>
             <div className="error-mail flex gap-2 items-center element">
               <svg
