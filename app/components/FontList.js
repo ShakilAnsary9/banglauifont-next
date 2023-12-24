@@ -60,10 +60,10 @@ const FontLists = {
   fontlist3: [
     {
       id: "31",
-      title: "Alinur Borno Bikash - আলিনুর বর্নবিকাশ",
-      download_url: "/fonts/alinur-tatsama/alinur-tatsama.zip",
-      font_family: "font-family: 'Alinur Borno Bikash'",
-      preview_family: "Alinur Borno Bikash",
+      title: "Alinur Subas - আলিনুর সুবাস",
+      download_url: "/fonts/alinur-subas/alinur-subas.zip",
+      font_family: "font-family: 'Alinur Subas'",
+      preview_family: "Alinur Subas",
       cdn_link:
         "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/alinur-borno-bikas.css",
     },

@@ -12,6 +12,7 @@
 @import url(../public/css/bonbonia-kajla.css);
 @import url(../public/css/alinur-tatsama.css);
 @import url(../public/css/alinur-borno-bikas.css);
+@import url(../public/css/alinur-subas.css);
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -54,4 +55,10 @@ body {
 
 .link-cdn {
   font-family: "Fira Code", monospace;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
