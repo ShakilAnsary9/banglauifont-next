@@ -40,9 +40,12 @@ const FontLists = {
     },
     {
       id: "22",
-      title: "Example Font - উদাহরণ ফন্ট",
-      download_url: "",
-      font_family: "Example Font",
+      title: "Alinur Tatsama - আলিনুর ততসম",
+      download_url: "/fonts/alinur-tatsama/alinur-tatsama.zip",
+      font_family: "font-family: 'Alinur Tatsama'",
+      preview_family: "Alinur Tatsama",
+      cdn_link:
+        "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/alinur-tatsama.css",
     },
   ],
   fontlist3: [
