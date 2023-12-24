@@ -1,6 +1,39 @@
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { ref, get, set } from "firebase/database";
+import { database } from "../utils/Firebase";
 
 const Header = () => {
+  const [visitCount, setVisitCount] = useState(0);
+
+  useEffect(() => {
+    const visitCountRef = ref(database, "visit_counter");
+
+    const fetchVisitCount = async () => {
+      try {
+        const snapshot = await get(visitCountRef);
+        if (snapshot.exists()) {
+          setVisitCount(snapshot.val());
+        }
+      } catch (error) {
+        console.error("Error fetching visit count:", error);
+      }
+    };
+
+    const incrementVisitCount = async () => {
+      try {
+        await set(visitCountRef, (visitCount || 0) + 1);
+        // After the count is updated, fetch the updated count
+        fetchVisitCount();
+      } catch (error) {
+        console.error("Error incrementing visit count:", error);
+      }
+    };
+
+    // Increment visit count on initial load
+    incrementVisitCount();
+  }, []);
+
   return (
     <>
       <div className="container mx-auto mt-4 mb-8">
@@ -27,7 +60,7 @@ const Header = () => {
                   <path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
                 </g>
               </svg>
-              <span>9.8k</span>
+              <span>{visitCount}</span>
             </div>
             <div className="error-mail flex gap-2 items-center element">
               <svg
