@@ -29,6 +29,7 @@ module.exports = {
       },
       fontSize: {
         small: "10px",
+        tm: "14px",
       },
       zIndex: {
         1: "1",
