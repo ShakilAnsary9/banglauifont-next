@@ -28,42 +28,44 @@ const Controller = ({
   };
 
   return (
-    <div className="container mx-auto p-5 md:p-10 mb-6 bg-[url('/svg/font-bg.svg')] bg-image rounded-2xl">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <input
-          className="col-span-1 md:col-span-2 px-4 rounded-xl h-12 text-black"
-          type="text"
-          placeholder="এখানে লিখুন"
-          value={inputText}
-          onChange={handleInputChange}
-        />
-        <div>
-          <span>Font Weight</span>
+    <div className="container px-4 sm:mx-auto ">
+      <div className="mb-6 bg-[url('/svg/font-bg.svg')] bg-image rounded-2xl">
+        <div className="grid grid-cols-1 p-5 md:p-10 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <input
-            className="w-full"
-            type="range"
-            name=""
-            id="fontweight"
-            min="100"
-            max="900"
-            step={100}
-            value={fontWeight}
-            onChange={handleFontWeightChange}
+            className="col-span-1 md:col-span-2 px-4 rounded-xl h-12 text-black"
+            type="text"
+            placeholder="এখানে লিখুন"
+            value={inputText}
+            onChange={handleInputChange}
           />
-        </div>
-        <div>
-          <span>Font Size</span>
-          <input
-            className="w-full"
-            type="range"
-            name=""
-            min="10"
-            max="60"
-            id="fontsize"
-            step={1}
-            value={fontSize}
-            onChange={handleFontSizeChange}
-          />
+          <div>
+            <span>Font Weight</span>
+            <input
+              className="w-full"
+              type="range"
+              name=""
+              id="fontweight"
+              min="100"
+              max="900"
+              step={100}
+              value={fontWeight}
+              onChange={handleFontWeightChange}
+            />
+          </div>
+          <div>
+            <span>Font Size</span>
+            <input
+              className="w-full"
+              type="range"
+              name=""
+              min="10"
+              max="60"
+              id="fontsize"
+              step={1}
+              value={fontSize}
+              onChange={handleFontSizeChange}
+            />
+          </div>
         </div>
       </div>
     </div>

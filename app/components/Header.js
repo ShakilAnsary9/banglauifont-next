@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="container mx-auto mt-4 mb-8">
+      <div className="container px-4 sm:mx-auto mt-4 mb-8">
         <div className="grid grid-cols-2">
           <div className="logo flex align-center">
             <Image
