@@ -28,7 +28,7 @@ const Controller = ({
   };
 
   return (
-    <div className="container px-4 sm:mx-auto ">
+    <div className="container px-2 sm:px-0 sm:mx-auto ">
       <div className="mb-6 bg-[url('/svg/font-bg.svg')] bg-image rounded-2xl">
         <div className="grid grid-cols-1 p-5 md:p-10 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <input
