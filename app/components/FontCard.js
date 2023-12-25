@@ -182,10 +182,10 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
                 </div>
               </details>
 
-              <div className="flex justify-between mt-5">
+              <div className="flex justify-between gap-2 mt-5">
                 <a
                   href={font.download_url}
-                  className="card-btn font-down-btn"
+                  className="card-btn font-down-btn text-tm sm:text-inherit"
                   onClick={() => {
                     handleFontDownload(font.id);
                   }}
@@ -247,7 +247,7 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
                 </a>
 
                 <button
-                  className="card-btn font-copy-btn"
+                  className="card-btn font-copy-btn text-tm sm:text-inherit"
                   onClick={() => copyFontFamily(font.font_family, index)}
                 >
                   Copy Font Family
@@ -268,7 +268,7 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
 
   return (
     <>
-      <div className="container px-4 sm:px-0 sm:mx-auto">
+      <div className="container px-2 sm:px-0 sm:mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.keys(FontLists).map((key) => (
             <div className="flex flex-col gap-6" key={key}>
