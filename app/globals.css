@@ -4,9 +4,9 @@
 
 /* Custom Font */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 /* FontCSS */
+@import url(../public/css/space-grotesk.css);
 @import url(../public/css/hind-siliguri.css);
 @import url(../public/css/anek-bangla.css);
 @import url(../public/css/tiro-bangla.css);
