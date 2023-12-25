@@ -52,7 +52,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  font-family: "Space Grotesk", "Hind Siliguri", sans-serif !important;
+  font-family: "'Space Grotesk', 'Hind Siliguri', sans-serif" !important;
 }
 
 .link-cdn {
