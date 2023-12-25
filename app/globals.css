@@ -37,7 +37,7 @@
 }
 
 .card-btn {
-  @apply bg-primary text-white p-normal rounded-xl relative;
+  @apply bg-primary text-white p-normal rounded-lg relative;
 }
 
 .tag {
