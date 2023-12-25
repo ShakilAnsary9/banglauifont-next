@@ -54,7 +54,7 @@ const Header = () => {
                   <path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
                 </g>
               </svg>
-              <span className="font-sans">
+              <span>
                 {visitCount || (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
