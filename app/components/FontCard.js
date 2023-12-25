@@ -80,11 +80,11 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
       <>
         {fonts.map((font, index) => (
           <div
-            className="bg-card rounded-2xl p-5 relative overflow-hidden"
+            className="bg-card font-space rounded-2xl p-5 relative overflow-hidden"
             key={index}
           >
             <div className="relative z-10">
-              <h1 className="md:text-lg text-xl  font-medium mb-2">
+              <h1 className="md:text-lg text-xl font-medium mb-2">
                 {font.title}
               </h1>
               <small>Preview</small>
@@ -100,7 +100,7 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
                 {previewText}
               </div>
 
-              <details className="open:ring-1 open:ring-black/5 transform-gpu delay-75 duration-200 ease-in-out ">
+              <details className="delay-75 duration-200 ease-in-out ">
                 <summary className="leading-6 text-slate-900 dark:text-white select-none list-none">
                   <div className="flex justify-between">
                     <div>CDN</div>
