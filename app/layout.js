@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${space.className} font-sans`}>{children}</body>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }
