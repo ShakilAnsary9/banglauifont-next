@@ -65,7 +65,7 @@ const FontLists = {
       font_family: "font-family: 'Alinur Subas'",
       preview_family: "Alinur Subas",
       cdn_link:
-        "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/alinur-borno-bikas.css",
+        "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/alinur-subas.css",
     },
   ],
 };
