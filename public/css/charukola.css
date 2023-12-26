@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 200;
   font-display: swap;
-  src: url(../fonts/Charukola/charukola-regular-400.woff) format("woff");
+  src: url(../fonts/charukola/charukola-regular-400.woff) format("woff");
 }
 @font-face {
   font-family: "Charukola";
