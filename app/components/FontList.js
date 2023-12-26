@@ -27,6 +27,15 @@ const FontLists = {
       cdn_link:
         "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/tiro-bangla.css",
     },
+    {
+      id: "14",
+      title: "Shokuntola - শকুন্তলা",
+      download_url: "/fonts/shokuntola/shokuntola.zip",
+      font_family: "font-family: 'Shokuntola'",
+      preview_family: "Shokuntola",
+      cdn_link:
+        "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/shokuntola.css",
+    },
   ],
   fontlist2: [
     {
@@ -66,6 +75,24 @@ const FontLists = {
       preview_family: "Alinur Subas",
       cdn_link:
         "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/alinur-subas.css",
+    },
+    {
+      id: "32",
+      title: "Lipishree - লিপিশ্রী",
+      download_url: "/fonts/lipishree/lipishree.zip",
+      font_family: "font-family: 'Lipishree'",
+      preview_family: "Lipishree",
+      cdn_link:
+        "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/lipishree.css",
+    },
+    {
+      id: "33",
+      title: "Charukola - চারুকলা",
+      download_url: "/fonts/charukola/charukola.zip",
+      font_family: "font-family: 'Charukola'",
+      preview_family: "Charukola",
+      cdn_link:
+        "https://cdn.jsdelivr.net/gh/ShakilAnsary9/banglauifont-next@latest/public/css/charukola.css",
     },
   ],
 };
