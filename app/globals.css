@@ -14,6 +14,9 @@
 @import url(../public/css/alinur-tatsama.css);
 @import url(../public/css/alinur-borno-bikas.css);
 @import url(../public/css/alinur-subas.css);
+@import url(../public/css/lipishree.css);
+@import url(../public/css/charukola.css);
+@import url(../public/css/shokuntola.css);
 
 :root {
   --foreground-rgb: 0, 0, 0;
