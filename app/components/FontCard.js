@@ -4,6 +4,21 @@ import { ref, onValue, off, set, increment } from "firebase/database";
 import { database } from "../utils/Firebase";
 
 const FontCard = ({ previewText, fontSize, fontWeight }) => {
+  const fontListsCount = Object.values(FontLists).reduce(
+    (total, list) => total + list.length,
+    0
+  );
+  const fontList1Count = FontLists.fontlist1.length;
+  const [fontsToShow, setFontsToShow] = useState(3);
+  const incrementValue = 1;
+
+  const loadMoreFonts = () => {
+    setFontsToShow((prevFontsToShow) => {
+      const updatedFontsToShow = prevFontsToShow + incrementValue;
+      return Math.min(updatedFontsToShow, fontListsCount);
+    });
+  };
+
   const handleFontDownload = (fontId) => {
     const fontRef = ref(database, `fonts/${fontId}/downloads`);
     set(fontRef, increment(1)).catch((error) => {
@@ -272,10 +287,17 @@ const FontCard = ({ previewText, fontSize, fontWeight }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.keys(FontLists).map((key) => (
             <div className="flex flex-col gap-6" key={key}>
-              <FontList fonts={FontLists[key]} />
+              <FontList fonts={FontLists[key].slice(0, fontsToShow)} />
             </div>
           ))}
         </div>
+        {fontsToShow >= fontList1Count + 1 ? null : (
+          <div className="text-center mt-4">
+            <button className="btn-load-more card-btn" onClick={loadMoreFonts}>
+              Load More Fonts
+            </button>
+          </div>
+        )}
       </div>
     </>
   );
